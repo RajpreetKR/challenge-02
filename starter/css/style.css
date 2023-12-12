@@ -193,6 +193,13 @@ header {
   border-right: var(--headings) solid 5px;
 }
 
+.project-title {
+  color: white;
+  font-size: 28px;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: black;
+}
+
 /* About CSS */
 #about {
   color: var(--headings);
@@ -272,4 +279,8 @@ header {
     "info"
   }
 
+  header {
+    display: flex;
+    flex-direction: column;
+  }
 }
