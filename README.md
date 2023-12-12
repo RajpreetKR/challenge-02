@@ -7,7 +7,7 @@ This is a challenge I did for my bootcamp. I was tasked to create a protfolio us
 ![Alt text](image.png)
 
 ## Live
-Link: https://rajpreetkr.github.io/challenge-02/starter/
+Link: https://rajpreetkr.github.io/challenge-02/test/
 
 ## License
 MIT License
