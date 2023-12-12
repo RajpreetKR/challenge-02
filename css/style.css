@@ -1,0 +1,275 @@
+:root {
+  --dark: rgb(48, 51, 59);
+  --light: rgb(146, 204, 206);
+  --headings: rgb(68, 88, 119);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: rgb(238, 238, 237);
+}
+
+/* Typography CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body h2 {
+  font-size: 36px;
+}
+
+p {
+  margin: 0;
+}
+
+/* Header CSS */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark);
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.name {
+  display: inline;
+  font-size: 36px;
+  color: var(--dark);
+  background-color: var(--light);
+  padding: 0px 20px 5px 50px;
+}
+
+/* Navigation CSS */
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu li {
+  display: inline;
+  color: var(--light);
+  border-bottom: 5px solid;
+  font-size: 24px;
+  padding: 0px 10px 0px 10px;
+  margin: 0px 15px 0px 15px;
+}
+
+/* Banner CSS */
+#hero-banner {
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  height: 350px;
+  position: relative;
+}
+
+#hero-banner h2 {
+  position: absolute;
+  right: 50px;
+  bottom: 25px;
+  color: var(--dark);
+  background-color: var(--light);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Grid CSS */
+#page-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 500px 300px 300px 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas: 
+  "about about-content about-content"
+  "work surf surf"
+  "work led calculator"
+  "work pastel run"
+  "contact info info";
+  grid-gap: 25px
+}
+
+#about {
+  grid-area: about;
+  margin-top: 15px;
+}
+
+#about-content {
+  grid-area: about-content;
+  margin-top: 25px;
+}
+
+#work {
+  grid-area: work;
+}
+
+#surf {
+  grid-area: surf;
+  background-image: url(../images/Image4.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--light) solid 5px;
+}
+
+#surf:hover {
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#led {
+  grid-area: led;
+  background-size: cover;
+  background-image: url(../images/Image1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--light) solid 5px;
+}
+
+#led:hover {
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+#calculator {
+  grid-area: calculator;
+  background-size: cover;
+  background-image: url(../images/Image2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--light) solid 5px;
+}
+
+#calculator:hover {
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#pastel {
+  grid-area: pastel;
+  background-image: url(../images/Image3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--light) solid 5px;
+}
+
+#pastel:hover {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#run {
+  grid-area: run;
+  background-size: cover;
+  background-image: url(../images/Image5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--light) solid 5px;
+}
+
+#run:hover {
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+#contact {
+  grid-area: contact;
+}
+
+#info {
+  grid-area: info;
+}
+
+/* Headings CSS */
+.heading {
+  text-align: right;
+  padding-right: 10px;
+  border-right: var(--headings) solid 5px;
+}
+
+/* About CSS */
+#about {
+  color: var(--headings);
+}
+
+/* Work CSS*/
+#work {
+  color: var(--headings);
+}
+
+/* Contact CSS */
+#contact {
+  color: var(--headings);
+}
+
+#info li {
+  display: inline;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-bottom: 2px solid;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: var(--headings);
+}
+
+@media only screen and (max-width: 1000px) {
+  /* main,
+  nav {
+    flex-direction: column;
+  } */
+  
+  #page-wrapper {
+    display: grid;
+    grid-template-rows: 75px 1fr 75px 500px 300px 300px 75px 75px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "about about"
+    "about-content about-content"
+    "work work"
+    "surf surf"
+    "led calculator"
+    "pastel run"
+    "contact contact"
+    "info info"
+  }
+
+  #about {
+    grid-area: about;
+    margin-top: 15px;
+  }
+
+  .heading {
+    grid-area: about;
+    text-align: center;
+    border-bottom: var(--headings) solid 5px;
+    border-right: none;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  #page-wrapper {
+    display: grid;
+    grid-template-rows: 75px 1fr 75px 150px 150px 150px 150px 150px 75px 75px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "about"
+    "about-content"
+    "work"
+    "surf"
+    "led"
+    "calculator"
+    "pastel"
+    "run"
+    "contact"
+    "info"
+  }
+
+}
